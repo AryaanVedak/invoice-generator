@@ -1,0 +1,207 @@
+.clearfix {
+    clear: both;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0 auto;
+    font-size: 8px;
+}
+
+table
+{
+    table-layout:fixed;
+    width:100%;
+    word-break: break-word;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+th {
+    font-size: 8px;
+}
+
+td {
+    font-size: 10px;
+}
+
+p {
+    font-size: 10px;
+}
+
+.page-break {
+    page-break-after: always;
+}
+
+.allBorder {
+    border: 1px solid #000;
+}
+
+.topBorder {
+    border-top: 1px solid #000;
+}
+
+.bottomBorder {
+    border-bottom: 1px solid #000;
+}
+
+header .leftSection {
+    float: left;
+    width: 48%;
+    padding-right: 5%;
+    border-right: 1px solid black;
+}
+
+.address {
+    font-size: 12px;
+}
+
+header .leftSection h4 {
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+header .leftSection address {
+    font-style: normal;
+    font-size: 14px;
+    margin-top: -15px
+}
+
+header .rightSection {
+    float: left;
+    width: 45%;
+}
+
+header .rightSection label {
+    display: block;
+    font-weight: bold;
+}
+.tblRecipientRightSection {
+    font-size:13px;
+}
+.tblRecipientLeftSection {
+    font-size: 13px;
+}
+
+.ph_no {
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+.billProductDetailsTable {
+    width: 100%;
+    font-size:12px;
+}
+
+.billProductDetailsTable thead th {
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+.billProductDetailsTable tbody td {
+    border-left: 1px solid #000;
+    /*padding: 7px;*/
+}
+
+.billProductDetailsTable thead th:first-of-type,
+.billProductDetailsTable tbody td:first-of-type {
+    border-left: none;
+}
+
+.itemDetailSection p {
+    font-size: 12px;
+}
+.terminologyLeftTable{
+    float:left;
+    height: 150px;
+    width: 50%;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.terminologyRightTable {
+    float:right;
+    height: 150px;
+    width: 50%;
+    border-bottom: 1px solid black;
+}
+.terminology {
+    margin-top: 15px;
+}
+
+.terminology table {
+    font-size: 15px;
+}
+
+.terminology table td:nth-of-type(even) {
+    width: 35%;
+    padding-left: 40px;
+}
+
+.terminology aside {
+    text-align: end;
+    padding: 0 30px 0px 0;
+}
+
+.terminology aside h5 {
+    font-weight: normal;
+}
+
+.medicalDetails {
+    margin-bottom: 15px;
+}
+
+.medicalDetails table {
+    width: 44%;
+    float: left;
+}
+
+.medicalDetails table td {
+    padding: 7px;
+}
+
+.medicalDetails table td:nth-of-type(odd) {
+    font-weight: bold;
+}
+
+.FooterPaging {
+    margin: 50px 0 0 700px;
+    text-align: right;
+    padding: 10px 30px;
+    width: 180px;
+}
+
+.uns-title {
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uns-title-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buyer-address{
+    font-size: 0.8rem;
+}
+
+#bill {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 580px;
+    height: 770px;
+}
+
+.sign {
+    margin-top: 102px;
+}
+
+.bank-details {
+    font-size: 12px;
+    margin: 0
+}
