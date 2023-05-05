@@ -4,12 +4,11 @@ import TextArea from "antd/es/input/TextArea.js";
 import {useEffect, useState} from "react";
 import Item from "../components/Item.jsx";
 import { useNavigate } from "react-router-dom";
-import numWords from "num-words";
 
 const Home = () => {
 
   const [product, setProduct] = useState([])
-  const [buyName, setBuyName] = useState()
+  const [buyName, setBuyName] = useState("FREUDENBERG GALA HOUSEHOLD PRODDUCT PRIVATE LIMITED")
   const [buyAddress, setBuyAddress] = useState()
   const [itemTitle, setItemTitle] = useState()
   const [itemDescription, setItemDescription] = useState()
@@ -70,18 +69,20 @@ const Home = () => {
           Buyer Name
         </Col>
         <Col span={8}>
-          <Input onChange={(e) =>  setBuyName(e.target.value)}/>
+          <Input value={buyName} onChange={(e) =>  setBuyName(e.target.value)} disabled/>
         </Col>
         <Col span={4}>
           Buyer Address
         </Col>
         <Col span={8}>
           <TextArea
+            value={buyAddress}
             onChange={(e) => setBuyAddress(e.target.value)}
             autoSize={{
               minRows: 3,
               maxRows: 6,
             }}
+            disabled
           />
         </Col>
       </Row>
@@ -150,8 +151,8 @@ const Home = () => {
         product.map(prod =>
           // eslint-disable-next-line react/jsx-key
           <Item
-            title={prod.buyName}
-            description={prod.itemTitle}
+            title={prod.itemTitle}
+            description={prod.itemDescription}
             amount={prod.rate}
         />)
       }

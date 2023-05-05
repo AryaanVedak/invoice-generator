@@ -123,7 +123,7 @@ const Bill = () => {
                   // eslint-disable-next-line react/jsx-key,no-unexpected-multiline
                   <tr>
                     <td>{item.id + 1}</td>
-                    <td colSpan="3"><b>{item.itemTitle}</b><br/>{item.itemTitle}</td>
+                    <td colSpan="3"><b>{item.itemTitle}</b><br/>{item.itemDescription}</td>
                     <td></td>
                     <td>{item.rate}</td>
                     <td>1</td>
