@@ -3,6 +3,7 @@ import Bill from "./components/Bill.jsx";
 import {Col, Row} from "antd";
 import {Route, Routes} from "react-router-dom";
 import Home from "./pages/Home.jsx";
+import LogoBill from "./components/LogoBill.jsx";
 
 function App() {
 
@@ -17,6 +18,9 @@ function App() {
             }/>
             <Route path="/bill" element={
               <Bill/>
+            }/>
+            <Route path="/logobill" element={
+              <LogoBill/>
             }/>
           </Routes>
         </Col>

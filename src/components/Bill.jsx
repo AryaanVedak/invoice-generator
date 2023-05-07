@@ -8,6 +8,8 @@ const Bill = () => {
   const  back = useNavigate()
   const location = useLocation()
 
+  const history = useNavigate()
+
   const handleBack = () => {
     back("/");
   }
@@ -40,7 +42,16 @@ const Bill = () => {
   return (
     <>
       <Button type={"default"} onClick={handleBack}>Back</Button>&nbsp;
-      <Button type={"primary"} onClick={generatePDF}>Download</Button>
+      <Button type={"primary"} onClick={generatePDF}>Download</Button>&nbsp;
+      <Button type={"primary"} onClick={() => {
+        history("/logobill", {state:
+            {
+              product: location.state.product,
+              total: location.state.total,
+              billNo: location.state.billNo,
+              date: location.state.date,
+            }})}
+      }>Logo Bill</Button>
     <div className="wholePrintBody page-break" id="bill" style={{marginBottom: 0}}>
       <header style={{marginTop: 125}}>
         <div className="allBorder">
