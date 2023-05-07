@@ -133,9 +133,9 @@ const Bill = () => {
                     <td>1</td>
                     <td>{item.rate}</td>
                     <td colSpan="2">{item.rate}</td>
-                    <td>{item.gst / 2}</td>
+                    <td>{item.gst / 2}%</td>
                     <td>{(item.rate * (item.gst / 2)) / 100}</td>
-                    <td>{item.gst / 2}</td>
+                    <td>{item.gst / 2}%</td>
                     <td>{(item.rate * (item.gst / 2)) / 100}</td>
                     <td>{((item.rate * (item.gst / 2)) / 100) * 2}</td>
                     <td>{item.rate + ((item.rate * (item.gst / 2)) / 100) * 2}</td>
