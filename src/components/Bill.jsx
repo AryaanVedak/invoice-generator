@@ -144,7 +144,7 @@ const Bill = () => {
               }
               <tr>
                 <th colSpan="15" style={{border: "1px solid black", borderBottom: "0px"}}></th>
-                <th style={{border: "1px solid black", borderBottom: "0px"}}>{location.state.total}</th>
+                <th style={{border: "1px solid black", borderBottom: "0px", fontSize: "10px"}}>{location.state.total}</th>
               </tr>
               </tbody>
 
@@ -187,6 +187,7 @@ const Bill = () => {
           </div>
         </section>
       </main>
+      <p style={{marginTop: 0}}>Declaration: * No Complaint regarding this bill will be entertained if not noticed in writing within 7 days.</p>
     </div>
     </>
   )
