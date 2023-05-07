@@ -18,9 +18,13 @@ const Bill = () => {
     const doc = new jsPDF("p", "pt", "a4");
     doc.html(document.querySelector("#bill"), {
       callback: function (pdf) {
+        const pageCount = doc.internal.getNumberOfPages();
+        console.log(pageCount)
+        doc.deletePage(pageCount)
         pdf.save("bill.pdf")
       }
     })
+
   }
 
   const toTitleCase = (str) => {
@@ -37,11 +41,11 @@ const Bill = () => {
     <>
       <Button type={"default"} onClick={handleBack}>Back</Button>&nbsp;
       <Button type={"primary"} onClick={generatePDF}>Download</Button>
-    <div className="wholePrintBody page-break" id="bill" >
+    <div className="wholePrintBody page-break" id="bill" style={{marginBottom: 0}}>
       <header style={{marginTop: 125}}>
         <div className="allBorder">
           <section className="leftSection ">
-            <h4 style={{margin: 5}}>OMKAR CREATIONS</h4>
+            <p style={{margin: 5, fontSize: 14, fontWeight: 'bold'}}>OMKAR CREATIONS</p>
             <p className="address" style={{margin: 5}}>
               A-401 Prakriti Aprt, M.S. Road, Mittal Park,<br/>
               Raghunath Nagar, Thane(W),<br/>
@@ -81,7 +85,7 @@ const Bill = () => {
       <main>
         <section className="medicalDetails allBorder">
           <div>
-            <h4 style={{margin: 5}}>BUYER</h4>
+            <p style={{margin: 5, fontSize: 14, fontWeight: 'bold'}}>BUYER</p>
             <p style={{fontWeight: "bold", margin: 5}}>FREUDENBERG GALA HOUSEHOLD PRODDUCT PRIVATE LIMITED</p>
             <p className="buyer-address" style={{margin: 5}}>
               902/903/904, B-Wing, O2 Galleria, Plot No. 23/24, Minevera Industrial Estate Off LBS Marg, Opp Asha Nagar<br/>
